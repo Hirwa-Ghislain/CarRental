@@ -6,12 +6,13 @@ import {
   XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, 
   Legend, TooltipProps
 } from 'recharts';
-import { carOptions, PredictionResult, generateHistoricalPrices } from '@/lib/mockData';
+import { carOptions, generateHistoricalPrices } from '@/lib/mockData';
+import { PredictionResult } from '@/services/api';
 import { DollarSign, TrendingUp, Zap, Calendar, Clock, AlertCircle, CheckCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface ResultsDisplayProps {
-  predictionResult: PredictionResult | null;
+  predictionResult: PredictionResult;
   carType: string;
   days: number;
   location: string;
