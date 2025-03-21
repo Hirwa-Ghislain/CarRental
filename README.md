@@ -1,69 +1,87 @@
-# Welcome to your Lovable project
+# Car Rental Price Prediction Application
 
-## Project info
+A full-stack application that predicts car rental prices based on various factors like car type, location, season, and rental duration.
 
-**URL**: https://lovable.dev/projects/36f32173-57a3-4ca0-9542-5d43d16f5112
+## Project Overview
 
-## How can I edit this code?
+This application combines:
+- React frontend with Tailwind CSS and shadcn UI components
+- Node.js/Express backend API server
+- Python Flask machine learning prediction service
 
-There are several ways of editing your application.
+The app provides users with accurate rental cost forecasts using a prediction model that takes into account historical pricing data and various market factors.
 
-**Use Lovable**
+## Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/36f32173-57a3-4ca0-9542-5d43d16f5112) and start prompting.
+- Interactive prediction form with real-time validation
+- Detailed results display with confidence levels and price ranges
+- Car comparison tool to explore different rental options
+- Responsive design that works on all devices
 
-Changes made via Lovable will be committed automatically to this repo.
+## Tech Stack
 
-**Use your preferred IDE**
+### Frontend
+- React with TypeScript
+- Tailwind CSS for styling
+- shadcn/ui component library
+- React Query for data fetching
+- Recharts for data visualization
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Backend
+- Node.js/Express server
+- RESTful API architecture
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### ML Model
+- Python Flask API
+- scikit-learn for prediction algorithm
 
-Follow these steps:
+## Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Prerequisites
+- Node.js (v14+)
+- npm or yarn
+- Python 3.8+ with pip
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Installation & Running the Application
 
-# Step 3: Install the necessary dependencies.
-npm i
+1. **Clone the repository**
+git clone <repo>
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+2. **Install frontend dependencies**
+npm install
+
+
+3. **Start the frontend development server**
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+The React app will be available at http://localhost:8080
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+4. **Install and start the Node.js backend**
+cd server npm install npm run dev
 
-**Use GitHub Codespaces**
+The API server will run on http://localhost:5000
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+5. **Install and start the Python prediction model**
+cd model pip install -r requirements.txt python app.py
 
-## What technologies are used for this project?
+The ML service will run on http://localhost:5001
 
-This project is built with .
+## Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- `/src` - Frontend React application
+- `/server` - Node.js backend API
+- `/model` - Python prediction model
 
-## How can I deploy this project?
+## Environment Variables
 
-Simply open [Lovable](https://lovable.dev/projects/36f32173-57a3-4ca0-9542-5d43d16f5112) and click on Share -> Publish.
+Create a `.env` file in the project root with:
+VITE_API_URL=http://localhost:5000/api
 
-## I want to use a custom domain - is that possible?
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+## Deployment
+
+The application is configured for easy deployment:
+- Frontend can be built with `npm run build`
+- Backend can be deployed to any Node.js hosting service
+- ML model can be deployed as a separate microservice
+
